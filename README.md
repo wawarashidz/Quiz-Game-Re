@@ -4,4 +4,4 @@ A quiz game program originally written in C but need to be change to OO language
 ## Screenshots
 
 Screenshot of the original C program:
-![ss](Quizgame_ori_ss.PNG)
+![ss](Quizgame ori ss.PNG)
