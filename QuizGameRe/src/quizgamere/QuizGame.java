@@ -1,14 +1,15 @@
 
 package quizgamere;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Collections;
 
 class Question {
     String question;
-    HashMap<String, String> answers; //<key (A,B,C,D), values (answer)> 
+    ArrayList<String> answers; 
     String correctAns; // A, B, C or D
     
-    Question (String question, HashMap answers, String correctAns) {
+    Question (String question, ArrayList answers, String correctAns) {
         this.question = question;
         this.answers = answers;
         this.correctAns = correctAns;
@@ -17,7 +18,7 @@ class Question {
     public String getQuestion() {
         return question;
     }
-    public HashMap getAnswers() {
+    public ArrayList getAnswers() {
         return answers;
     }
     
@@ -28,6 +29,10 @@ class Question {
      */
     public boolean isCorrect(String ans) {
         return ans.equals(correctAns);
+    }
+    
+    public void shuffleAnswers() {
+        Collections.shuffle(answers);
     }
 } 
 
