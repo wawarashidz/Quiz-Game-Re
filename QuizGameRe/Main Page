@@ -1,0 +1,79 @@
+package quizgame;
+
+import java.util.*;
+
+
+class Choice{
+    char choice;
+}
+class Main_Page{
+    String answer;
+    public void welcome(){
+        System.out.println("PROGRAM QUIZ GAME");
+        System.out.println("__________________________________");
+        System.out.println("WELCOME");
+        System.out.println("to");
+        System.out.println("THE GAME");
+        System.out.println("BECOME A MILLIONAIRE!!!!!!!!!!");
+        System.out.println("__________________________________");
+        
+    }
+    public void choose(){
+        System.out.println("Press S to get start");
+        System.out.println("Press V to view the highest score");
+        System.out.println("Press R to reset score");
+        System.out.println("Press H for help");
+        System.out.println("Press Q to quit");
+        System.out.println("___________________________________");
+    }  
+}
+class askName{
+    String user_name;
+   public void asking(){
+       System.out.println("Enter your name :");
+       Scanner s = new Scanner(System.in);
+       user_name = s.nextLine();
+   }
+}
+
+class viewScore{
+    int score;
+    public void viewing(){
+        System.out.println("Highest score is  :");
+        
+    }
+}
+class resetScore{
+    int score;
+    public void reseting(){
+      //reset the score
+    }
+}
+
+class Help{
+    public void helping(){
+        System.out.println("instructions for help");
+    }
+}
+
+
+public class QuizGame {
+    public static void main(String[] args) {
+       Main_Page main_page1 = new Main_Page ();
+       askName askName_1 = new askName();
+       viewScore viewScore_1 = new viewScore();
+       resetScore resetScore_1 = new resetScore ();
+       Help help1 = new Help();
+       main_page1.welcome();
+       main_page1.choose();
+       askName_1.asking();
+       viewScore_1.viewing();
+       resetScore_1.reseting();
+       help1.helping();
+       
+       // user input choice
+       Scanner s = new Scanner(System.in);
+       
+    }
+    
+}
